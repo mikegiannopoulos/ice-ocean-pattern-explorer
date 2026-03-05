@@ -4,6 +4,29 @@
 
 IOBL-PX provides a reproducible BedMachine-based basal channel detection workflow with a command-line runner and an optional Streamlit interface, using the same underlying pipeline logic for both.
 
+## Method Summary
+
+1. Load the BedMachine Antarctica NetCDF dataset.
+2. Subset a user-selected region of interest (ROI).
+3. Build a floating-ice interior mask with an edge buffer.
+4. Apply Gaussian filtering at large and small spatial scales.
+5. Compute an anomaly field from the scale-separated draft signal.
+6. Threshold the anomaly field using a high quantile.
+7. Extract connected candidate channel structures and skeletonize centerlines.
+8. Compute morphological diagnostics (length, orientation, and summary statistics).
+
+## Data Source
+
+BedMachine Antarctica is provided by NSIDC as dataset NSIDC-0756:
+https://nsidc.org/data/data-access-tool/NSIDC-0756/versions/4
+
+# file name that should be downloaded "NSIDC-0756_BedMachineAntarctica_19700101-20191001_V04.1.nc"
+
+Place the dataset file at:
+`data/raw/bedmachine_antarctica.nc`
+
+Large external datasets are not tracked in git.
+
 ## Data Requirement
 
 BedMachine data is not included in this repository. Place the NetCDF file at:
@@ -31,6 +54,13 @@ Test extra:
 ```bash
 pip install -e ".[test]"
 ```
+
+## Requirements
+
+- Python >= 3.10
+- Tested with Python 3.14
+- Key libraries: `numpy`, `scipy`, `xarray`, `scikit-image`, `matplotlib`
+- Optional app dependency: `streamlit`
 
 ## CLI Quickstart
 
@@ -66,6 +96,27 @@ Each run writes to a run-specific output directory under `outputs/` by default, 
 - `figures/fig04_channel_lengths.png`
 
 Sweep mode additionally writes `sweep_results.csv` and sweep summary figures in `figures/`.
+
+## Example Output
+
+![Example channel detection overlay](figures/fig02_channels_overlay.png)
+
+Generated run outputs are written to paths like:
+`outputs/.../figures/fig02_channels_overlay.png`
+
+## Typical Runtime
+
+- Single ROI run: ~5–30 seconds
+- Sweep mode: ~10–20 seconds depending on parameter grid
+
+## Repository Structure
+
+- `src/ioblp/` core pipeline logic
+- `scripts/` CLI runner
+- `app/` Streamlit interface
+- `outputs/` generated results
+- `data/raw/` BedMachine input dataset
+- `tests/` optional test suite
 
 ## Streamlit (Local)
 
