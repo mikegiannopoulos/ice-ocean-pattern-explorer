@@ -20,7 +20,7 @@ IOBL-PX provides a reproducible BedMachine-based basal channel detection workflo
 BedMachine Antarctica is provided by NSIDC as dataset NSIDC-0756:
 https://nsidc.org/data/data-access-tool/NSIDC-0756/versions/4
 
-file name that should be downloaded "NSIDC-0756_BedMachineAntarctica_19700101-20191001_V04.1.nc"
+The file name that should be downloaded is "NSIDC-0756_BedMachineAntarctica_19700101-20191001_V04.1.nc"
 
 Place the dataset file at:
 `data/raw/bedmachine_antarctica.nc`
