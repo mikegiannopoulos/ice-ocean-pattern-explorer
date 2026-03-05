@@ -58,7 +58,7 @@ pip install -e ".[test]"
 ## Requirements
 
 - Python >= 3.10
-- Tested with Python 3.14
+- Tested with Python 3.14.3
 - Key libraries: `numpy`, `scipy`, `xarray`, `scikit-image`, `matplotlib`
 - Optional app dependency: `streamlit`
 
