@@ -118,8 +118,12 @@ Generated run outputs are written to paths like:
 - `data/raw/` BedMachine input dataset
 - `tests/` optional test suite
 
-## Streamlit (Local)
+## Interactive Demo (Streamlit)
 
+An optional Streamlit interface is included for interactive exploration of the
+channel detection pipeline.
+
+Run locally:
 ```bash
 streamlit run app/streamlit_app.py
 ```
