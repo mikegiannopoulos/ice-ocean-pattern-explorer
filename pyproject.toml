@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ioblp"
+version = "0.1.0"
+description = "Ice–Ocean Boundary Layer Pattern Explorer"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "xarray",
+    "scipy",
+    "netCDF4",
+    "matplotlib",
+    "scikit-image",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+app = ["streamlit"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,47 @@
+{
+  "CollectionReference": {
+    "ShortName": "NSIDC-0756",
+    "Version": "4"
+  },
+  "MetadataSpecification": {
+    "URL": "https://cdn.earthdata.nasa.gov/umm/granule/v1.6.6",
+    "Name": "UMM-G",
+    "Version": "1.6.6"
+  },
+  "SpatialExtent": {
+    "HorizontalSpatialDomain": {
+    "Geometry": {
+        "BoundingRectangles": [{
+            "WestBoundingCoordinate": -180.0,
+            "NorthBoundingCoordinate": -53.0,
+            "EastBoundingCoordinate": 180.0,
+            "SouthBoundingCoordinate": -90.0
+        }]
+    }
+}
+
+  },
+  "TemporalExtent": {
+    "RangeDateTime": {"BeginningDateTime": "1970-01-01T00:00:00.000Z", "EndingDateTime": "2019-10-01T23:59:59.999Z"}
+}
+,
+  
+  
+  "DataGranule": {
+    "DayNightFlag": "Unspecified",
+    "Identifiers": [
+      {
+        "Identifier": "NSIDC-0756_BedMachineAntarctica_19700101-20191001_V04.1.nc",
+        "IdentifierType": "ProducerGranuleId"
+      }
+    ],
+    "ProductionDateTime": "2026-01-20T20:35:35.694998+00:00",
+    "ArchiveAndDistributionInformation": [
+      {
+        "Name": "Not provided",
+        "SizeInBytes": 1198815840
+      }
+    ]
+  }
+}
+

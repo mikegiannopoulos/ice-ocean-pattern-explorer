@@ -1,0 +1,8 @@
+numpy
+xarray
+scipy
+netCDF4
+matplotlib
+
+[test]
+pytest
